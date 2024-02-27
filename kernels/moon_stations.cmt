@@ -1,0 +1,46 @@
+SPK for Moon Station Locations
+
+    Reference frame alias
+    ---------------------
+
+    This kernel uses the alias 'MOON_FIXED' to designate the reference frame
+    relative to which the data in this kernel are specified. In order for this
+    kernel to be usable, the alias must be mapped to the name of a supported
+    frame.
+
+        \begintext
+
+        Map 'MOON_FIXED' to MOON_PA.
+
+        \begindata
+
+            TKFRAME_MOON_FIXED_RELATIVE = 'MOON_PA'
+            TKFRAME_MOON_FIXED_SPEC = 'MATRIX'
+            TKFRAME_MOON_FIXED_MATRIX = ( 1   0   0
+                                          0   1   0
+                                          0   0   1 )
+
+        \begintext
+
+    Kernel Data
+    ============
+
+\begintext
+
+    Station locations and velocities, along with topocentric reference frames specification parameters:
+
+\begindata
+
+    SITES               +=              'MSTN-01'
+    MSTN-01_FRAME        =              'MOON_PA'
+    MSTN-01_CENTER       =              301
+    MSTN-01_IDCODE       =              301001
+    MSTN-01_EPOCH        =              @2020-JAN-01/00:00
+    MSTN-01_BOUNDS       =            ( @1950-JAN-01/00:00, @2150-JAN-01/00:00 )
+    MSTN-01_XYZ          =            ( 0.0000, 0.0000, -1735.97 )
+    MSTN-01_DXYZ         =            ( 0.0000, 0.0000, 0.0000 )
+    MSTN-01_TOPO_EPOCH   =              @2024-FEB-27/00:00
+    MSTN-01_UP           =              'Z'
+    MSTN-01_NORTH        =              'X'
+
+\begintext
